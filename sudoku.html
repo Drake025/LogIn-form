@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>9x9 Sudoku</title>
+    <link rel="stylesheet" type="text/css" href="sudoku.css">
+   
+
+</head>
+<body>
+    <div id="sudoku-container">
+        <!-- Dropdown Menu -->
+        <div class="dropdown">
+            <button onclick="toggleDropdown()" class="dropbtn">Menu</button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="index.html">Sign Up</a>
+                <a href="index.html?login=true">Change Account</a>
+                <a href="sudoku.html">Reset</a>
+                <a id="LogOutButton" onclick="clearLocalStorageAndRedirect()">Logout</a>
+                <a id="checkButton">Check</a>
+            </div>
+        </div>
+        <form>
+            <label for="sudoku-level">Choose a level:</label>
+            <select id="sudoku-level" name="sudoku-level">
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+                <option value="expert">Expert</option>
+            </select>
+            <br>
+        </form>
+
+        <h1>9x9 Sudoku</h1>
+        <div id="sudoku-grid"></div>
+        
+    </div>
+
+    <script src="sudoku.js"></script>
+</body>
+</html>
