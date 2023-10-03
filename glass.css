@@ -127,6 +127,11 @@ header {
   left: 20px;
   top: 20px;
 }
+@media screen and (max-width: 600px) {
+  .menu li {
+    margin-right: 20px; /* Adjust spacing for smaller screens */
+  }
+}
 
 form {
   display: flex;
