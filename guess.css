@@ -116,8 +116,9 @@ header {
 
 .wrapper {
   width: 430px;
-  background: rgba(255, 255, 255, 0.7);
-  /* Semi-transparent background */
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
   border-radius: 10px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
