@@ -1,0 +1,218 @@
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  padding: 0 10px;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-image: url('cyberpunk.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 60px;
+}
+
+header {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 15px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.menu li {
+  margin-right: 90px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Add styling for dropdown */
+.dropdown {
+  display: none;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.game-dropdown{
+  display: none;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.menu li:hover .game-dropdown {
+  display: block;
+}
+
+.game-dropdown a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 0;
+}
+
+.game-dropdown a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.menu li:hover .dropdown {
+  display: block;
+}
+
+.dropdown a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 0;
+}
+
+.dropdown a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Adjust wrapper positioning to avoid overlap with the header */
+.wrapper {
+  margin-top: 60px; /* Adjust as needed based on header height */
+  
+}
+
+.menu li:hover .dropdown {
+  display: none;
+}
+
+.dropdown a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 0;
+}
+
+.dropdown a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.wrapper {
+  width: 430px;
+  background: rgba(255, 255, 255, 0.7);
+  /* Semi-transparent background */
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper h1 {
+  font-size: 25px;
+  font-weight: 500;
+  padding: 20px 25px;
+  border-bottom: 1px solid #ccc;
+}
+
+.wrapper .content {
+  margin: 25px 25px 35px;
+}
+
+.content .inputs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.inputs input {
+  height: 57px;
+  width: 56px;
+  margin: 4px;
+  font-size: 24px;
+  font-weight: 500;
+  color: #1ba98c;
+  text-align: center;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.9); /* Slightly more opaque background */
+  pointer-events: none;
+  text-transform: uppercase;
+  border: 1px solid #1ba98c; /* Change the border color to improve contrast */
+}
+
+.typing-input {
+  opacity: 0;
+  z-index: -999;
+  position: absolute;
+  pointer-events: none;
+}
+
+.inputs input:first-child {
+  margin-left: 0px;
+}
+
+.content .details {
+  margin: 20px 0 25px;
+}
+
+.details p {
+  font-size: 19px;
+  margin-bottom: 10px;
+}
+
+.content .reset-btn {
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  outline: none;
+  padding: 15px 0;
+  font-size: 17px;
+  border-radius: 5px;
+  background: #1BB295;
+  transition: all 0.3s ease;
+}
+
+.content .reset-btn:hover {
+  background: #18a589;
+}
+
+@media screen and (max-width: 460px) {
+  .wrapper {
+    width: 100%;
+  }
+  .wrapper h1 {
+    font-size: 22px;
+    padding: 16px 20px;
+  }
+  .wrapper .content {
+    margin: 25px 20px 35px;
+  }
+  .inputs input {
+    height: 51px;
+    width: 50px;
+    margin: 3px;
+    font-size: 22px;
+  }
+  .details p {
+    font-size: 17px;
+  }
+  .content .reset-btn {
+    padding: 14px 0;
+    font-size: 16px;
+  }
+}
