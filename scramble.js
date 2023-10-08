@@ -45,6 +45,12 @@ const checkWord = () => {
 
 refreshBtn.addEventListener("click", initGame);
 checkBtn.addEventListener("click", checkWord);
+inputField.addEventListener('keydown', function (event) {
+  if (event.key === 'Enter') {
+      // Trigger the 'Check Word' by pressing the enter key in keyboard
+      checkWord();
+  }
+});
 
 function toggleDropdown() {
     var dropdown = document.getElementById("myDropdown");
